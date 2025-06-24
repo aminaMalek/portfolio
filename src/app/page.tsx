@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Linkedin, Mail, Phone, ExternalLink, Calendar, Award, Code } from 'lucide-react';
 import portfolioData from './data/data.json';
 
@@ -94,10 +95,12 @@ const Portfolio = () => {
             </div>
 
             <div className="flex justify-center md:justify-end">
-              <img
-                src="https://i.postimg.cc/QtbLwbgs/amina.jpg"
+              <Image
+                src="/amina.jpg"
                 alt="Photo de profil"
                 className="w-64 h-64 rounded-full object-cover border-4 border-blue-500 shadow-lg transition-transform duration-500 hover:scale-105"
+                width={256}
+                height={256}
               />
             </div>
           </div>
