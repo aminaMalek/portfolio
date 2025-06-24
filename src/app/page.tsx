@@ -220,7 +220,7 @@ const Portfolio = () => {
             Contact
           </h2>
           <p className="text-gray-400 mb-12 text-lg">
-            Intéressé par mon profil ? N'hésitez pas à me contacter !
+              Intéressé par mon profil ? N&apos;hésitez pas à me contacter !
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors">
