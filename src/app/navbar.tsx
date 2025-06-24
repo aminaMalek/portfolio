@@ -1,8 +1,22 @@
 'use client';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react'; 
+import { Menu, X } from 'lucide-react';
 
-export default function Navbar({ data, scrollToSection, activeSection }: any) {
+type NavbarProps = {
+  data: {
+    profile: {
+      name: string;
+      contact: {
+        email: string;
+        linkedin: string;
+      };
+    };
+  };
+  scrollToSection: (sectionId: string) => void;
+  activeSection: string;
+};
+
+export default function Navbar({ data, scrollToSection, activeSection }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
