@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Linkedin, Mail, Phone, ExternalLink, Calendar, Award, Code } from 'lucide-react';
 import portfolioData from './data/data.json';
+import Navbar from './navbar';
 
 type PortfolioData = typeof portfolioData;
 
@@ -41,28 +42,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen text-white relative overflow-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-gray-800/95 backdrop-blur-sm z-50 border-b border-gray-700">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold text-blue-400">{data?.profile.name}</h1>
-            <div className="hidden md:flex space-x-6">
-              {['profile', 'competences', 'experiences', 'projets', 'contact'].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={`capitalize transition-colors hover:text-blue-400 ${
-                    activeSection === section ? 'text-blue-400' : 'text-gray-300'
-                  }`}
-                >
-                  {section === 'competences' ? 'Compétences' : 
-                   section === 'experiences' ? 'Expériences' :
-                   section === 'projets' ? 'Projets' : section}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar data={data} scrollToSection={scrollToSection} activeSection={activeSection} />
 
       {/* Hero Section - Profile */}
       <section id="profile" className="pt-20 min-h-screen flex items-center bg-gray-900">
@@ -73,10 +53,10 @@ const Portfolio = () => {
                 <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                   {data?.profile.name}
                 </h1>
-                <h2 className="text-2xl text-gray-300 font-light">{data?.profile.title}</h2>
+                <h2 className="text-xl text-gray-300 font-light">{data?.profile.title}</h2>
               </div>
               <p className="text-lg text-gray-400 leading-relaxed">{data?.profile.description}</p>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-4">
                 <a
                   href={`mailto:${data?.profile.contact.email}`}
                   className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors flex items-center space-x-2"
@@ -90,6 +70,15 @@ const Portfolio = () => {
                 >
                   <Linkedin size={18} />
                   <span>LinkedIn</span>
+                </a>
+
+                <a
+                  href="/CV_Amina_MALEK.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg transition-colors flex items-center space-x-2 text-white"
+                >
+                  <span>Mon CV</span>
                 </a>
               </div>
             </div>
