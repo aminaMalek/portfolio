@@ -42,8 +42,13 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen text-white relative overflow-hidden">
       {/* Navigation */}
-      <Navbar data={data} scrollToSection={scrollToSection} activeSection={activeSection} />
-
+      {data && (
+        <Navbar
+          data={data}
+          scrollToSection={scrollToSection}
+          activeSection={activeSection}
+        />
+      )}
       {/* Hero Section - Profile */}
       <section id="profile" className="pt-20 min-h-screen flex items-center bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 py-20 w-full">
