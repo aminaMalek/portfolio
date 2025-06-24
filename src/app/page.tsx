@@ -197,7 +197,6 @@ const Portfolio = () => {
                     <Calendar size={14} className="mr-1" />
                     {projet.period}
                   </div>
-                  <p className="text-gray-500 text-sm">{projet.role}</p>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">{projet.description}</p>
                 <div className="flex flex-wrap gap-2">
