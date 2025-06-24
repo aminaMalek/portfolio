@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Linkedin, Mail, Phone, ExternalLink, Calendar, Award, Code, Database, Smartphone, Server, Globe, Wrench } from 'lucide-react';
+import { Linkedin, Mail, Phone, ExternalLink, Calendar, Award, Code } from 'lucide-react';
 import portfolioData from './data/data.json';
 
 type PortfolioData = typeof portfolioData;
