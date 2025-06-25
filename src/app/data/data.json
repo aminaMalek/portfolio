@@ -30,7 +30,7 @@
         },
         {
             "category": "Base de Données",
-            "skills": ["Oracle", "MySQL", "MongoDB"]
+            "skills": ["Oracle", "MySQL", "MongoDB", "Prisma", "Elasticsearch"]
         },
         {
             "category": "Languages de Programmation",
@@ -42,6 +42,7 @@
             "id": 1,
             "title": "Responsable de ressources humaines",
             "company": "GDG Algiers",
+            "link": "https://www.linkedin.com/company/gdg-algiers",
             "role": "Stratégie d'intégration et gestion des membres",
             "period": "07/2025 – present",
             "description": "En charge de la stratégie d'intégration des membres, du suivi de leur engagement et de la gestion de leur parcours au sein de l'équipe, tout en veillant à optimiser leur expérience au sein de la communauté.",
@@ -51,6 +52,7 @@
             "id": 2,
             "title": "Organisatrice principale",
             "company": "GDG Algiers",
+            "link": "https://www.linkedin.com/company/gdg-algiers",
             "role": "GCPC - GDG Competitive Programming Challenge",
             "period": "03/2025 – 04/2025",
             "description": "Planification de l'événement, coordination des équipes, prise de décisions stratégiques, gestion des imprévus et supervision de l'exécution.",
@@ -61,6 +63,7 @@
             "id": 3,
             "title": "Stage pratique",
             "company": "RDSI, Prestataire Informatique",
+            "link": "https://www.rdsi-dz.com",
             "role": "Intégration API Stripe",
             "period": "08/2024 – 09/2024",
             "description": "Intégration d'un module de paiement via l'API Stripe dans une plateforme de mise en relation entre auto-entrepreneurs et entreprises IT.",
@@ -72,6 +75,7 @@
             "id": 1,
             "title": "Conception de l'architecture d'un système énergétique pour Smart Cities",
             "institution": "École Nationale Supérieure d'informatique",
+            "link": "https://www.linkedin.com/school/ecole-superieure-informatique-alger",
             "period": "03/2025 – present",
             "description": "Conception d'une architecture logicielle pour un système de gestion énergétique dans les Smart Cities, axée sur l'analyse des attributs de qualité et le choix des tactiques et des styles architecturaux adaptés.",
             "technologies": ["Architecture logicielle", "Smart Cities", "Analyse système"]
@@ -80,6 +84,7 @@
             "id": 2,
             "title": "Nabdh - Application mobile de mise en relation médecins-patients",
             "institution": "École Nationale Supérieure d'informatique",
+            "link": "https://www.linkedin.com/school/ecole-superieure-informatique-alger",
             "period": "03/2025 – present",
             "description": "Conception et développement d'une application mobile de mise en relation entre médecins et patients, intégrant la prise de rendez-vous en ligne et la gestion des ordonnances électroniques.",
             "technologies": ["Kotlin", "Express.js", "API REST"]
@@ -88,6 +93,7 @@
             "id": 3,
             "title": "Plateforme d'aide des malvoyants",
             "institution": "École Nationale Supérieure d'informatique",
+            "link": "https://www.linkedin.com/school/ecole-superieure-informatique-alger",
             "period": "02/2025 – present",
             "description": "Développement d'un système de navigation pour les personnes malvoyantes, intégrant des capteurs IoT, applications mobiles, carte interactive et interface vocale pour une assistance autonome et sécurisée.",
             "technologies": ["IoT", "Mobile", "Web"]},
@@ -95,14 +101,16 @@
             "id": 4,
             "title": "GLP - GDG Learning platform",
             "institution": "Google Developers Group - GDG Algiers",
+            "link": "https://www.linkedin.com/company/gdg-algiers",
             "period": "01/2025 – 03/2025",
-            "description": "En charge du développement Frontend avec Next.js et de l'intégration entre le backend et le frontend.",
+            "description": "Collaborer pour créer une plateforme d'apprentissage en ligne pour les membres de GDG Algiers, facilitant l'accès aux ressources éducatives et aux formations.",
             "technologies": ["Next.js", "Intégration"]
         },
         {
             "id": 5,
             "title": "Compilateur Edhad",
             "institution": "École Nationale Supérieure d'Informatique",
+            "link": "https://www.linkedin.com/school/ecole-superieure-informatique-alger",
             "period": "10/2024 – 01/2025",
             "description": "Développement d'un mini-compilateur intégrant l'analyse lexicale, syntaxique et sémantique à l'aide de FLEX et BISON, avec une gestion de table des symboles, un langage personnalisé et un système de traitement des erreurs robuste.",
             "technologies": ["FLEX", "BISON", "Compilation"]
@@ -111,6 +119,7 @@
             "id": 6,
             "title": "Eureka - Moteur de recherche des articles scientifiques",
             "institution": "École Nationale Supérieure d'Informatique",
+            "link": "https://www.linkedin.com/school/ecole-superieure-informatique-alger",
             "period": "11/2023 – 01/2024",
             "description": "Membre de l'équipe Développement Frontend web et Backend. Utilisation d'Elasticsearch pour l'indexation et la recherche des articles.",
             "technologies": ["Elasticsearch", "React", "Django"]

@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Linkedin, Mail, Phone, ExternalLink, Calendar, Award, Code } from 'lucide-react';
+import { Linkedin, Mail, Phone, ExternalLink, Calendar, Award, Code, Copy } from 'lucide-react';
 import portfolioData from './data/data.json';
 import Navbar from './navbar';
 
@@ -11,6 +11,16 @@ const Portfolio = () => {
   const [data, setData] = useState<PortfolioData | null>(null);
   const [activeSection, setActiveSection] = useState('profile');
   const [loading, setLoading] = useState(true);
+
+  const [copied, setCopied] = useState(false);
+  const phone = data?.profile.contact.phone;
+
+  const copyToClipboard = () => {
+    if (!phone) return;
+    navigator.clipboard.writeText(phone);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -148,7 +158,7 @@ const Portfolio = () => {
                         </div>
                       )}
                     </div>
-                    <p className="text-blue-400 font-medium mb-2">{exp.company}</p>
+                    <p className="text-blue-400 font-medium mb-2"><a href={exp.link} target="_blank" rel="noopener noreferrer">{exp.company}</a></p>
                     <p className="text-gray-400 mb-4">{exp.role}</p>
                   </div>
                   <div className="flex items-center text-gray-400 text-sm">
@@ -186,7 +196,7 @@ const Portfolio = () => {
                   <ExternalLink size={20} className="text-gray-500 group-hover:text-blue-400 transition-colors" />
                 </div>
                 <div className="mb-4">
-                  <p className="text-blue-400 text-sm font-medium mb-1">{projet.institution}</p>
+                  <p className="text-blue-400 text-sm font-medium mb-1"> <a href={projet.link} target="_blank" rel="noopener noreferrer">{projet.institution}</a></p>
                   <div className="flex items-center text-gray-400 text-sm mb-2">
                     <Calendar size={14} className="mr-1" />
                     {projet.period}
@@ -216,15 +226,23 @@ const Portfolio = () => {
               Intéressé par mon profil ? N&apos;hésitez pas à me contacter !
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors">
+            <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors relative">
               <Phone className="mx-auto mb-4 text-blue-400" size={32} />
-              <h3 className="text-lg font-semibold mb-2">Téléphone</h3>
-              <p className="text-gray-400">{data?.profile.contact.phone}</p>
+              <h3 className="text-lg font-semibold mb-2 text-center">Téléphone</h3>
+              <div className="flex items-center justify-center space-x-2">
+                <p className="text-gray-400">{phone}</p>
+                <button onClick={copyToClipboard} className="text-gray-500 hover:text-blue-400 transition-colors">
+                  <Copy size={18} />
+                </button>
+              </div>
+              {copied && (
+                <p className="text-sm text-green-400 text-center mt-2">Copié !</p>
+              )}
             </div>
             <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors">
               <Mail className="mx-auto mb-4 text-blue-400" size={32} />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
-              <p className="text-gray-400 text-sm">{data?.profile.contact.email}</p>
+              <p className="text-gray-400 text-sm"> <a href={`mailto:${data?.profile.contact.email}`} className="text-blue-400 hover:text-blue-300 transition-colors">{data?.profile.contact.email}</a></p>
             </div>
             <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors">
               <Linkedin className="mx-auto mb-4 text-blue-400" size={32} />
