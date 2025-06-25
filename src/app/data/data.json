@@ -14,7 +14,7 @@
     "competences": [
         {
             "category": "Frontend Web",
-            "skills": ["React Js", "Next Js", "Tailwind CSS", "HTML", "CSS"]
+            "skills": ["React Js", "Next Js", "TypeScript", "Tailwind CSS", "HTML", "CSS"]
         },
         {
             "category": "Mobile",
